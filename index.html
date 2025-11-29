@@ -1,0 +1,22 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Resume Screening Agent</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h2>AI Resume Screening Agent</h2>
+    <form method="POST" enctype="multipart/form-data">
+        <textarea name="job_desc" placeholder="Paste Job Description here..." required></textarea>
+        <br><br>
+        <input type="file" name="resume" accept=".pdf" required>
+        <br><br>
+        <button type="submit">Rank Resume</button>
+    </form>
+
+    {% if result %}
+        <h3>Resume Match Score: {{ result }}%</h3>
+    {% endif %}
+</body>
+</html>
